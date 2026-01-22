@@ -1,0 +1,1 @@
+# Media files are managed through the entries app
