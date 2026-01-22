@@ -33,11 +33,14 @@ const theme = createTheme({
   },
 });
 
+// 获取basename，用于GitHub Pages部署
+const basename = process.env.NODE_ENV === 'production' ? '/personal-story-tracker' : '';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <App />

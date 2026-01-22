@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import { login, clearError } from '../../store/slices/authSlice';
 import { validateEmail } from '../../utils/validation';
+import DemoModeNotice from '../../components/Common/DemoModeNotice';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -120,6 +121,8 @@ const LoginPage = () => {
           <Typography variant="body2" color="textSecondary" gutterBottom>
             登录到您的个人故事追踪器
           </Typography>
+
+          <DemoModeNotice />
 
           {error && (
             <Alert severity="error" sx={{ width: '100%', mb: 2 }}>

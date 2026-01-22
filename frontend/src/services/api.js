@@ -1,10 +1,16 @@
 import axios from 'axios';
 import { store } from '../store/store';
 import { logout } from '../store/slices/authSlice';
+import { demoApi, isDemoMode, initDemoData } from './demoApi';
+
+// 初始化演示数据
+if (isDemoMode()) {
+  initDemoData();
+}
 
 // 创建axios实例
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: isDemoMode() ? '' : '/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
@@ -29,9 +35,48 @@ const processQueue = (error, token = null) => {
   failedQueue = [];
 };
 
+// 演示模式API包装器
+const createApiWrapper = (endpoint, method = 'GET') => {
+  return async (...args) => {
+    if (isDemoMode()) {
+      // 根据endpoint调用对应的演示API
+      switch (endpoint) {
+        case '/auth/login/':
+          return demoApi.login(args[0]);
+        case '/auth/register/':
+          return demoApi.register(args[0]);
+        case '/auth/logout/':
+          return demoApi.logout();
+        case '/auth/user/':
+          return demoApi.getCurrentUser();
+        case '/entries/':
+          if (method === 'GET') return demoApi.getEntries(args[0]);
+          if (method === 'POST') return demoApi.createEntry(args[0]);
+          break;
+        case '/entries/{id}/':
+          if (method === 'GET') return demoApi.getEntry(args[0]);
+          if (method === 'PUT') return demoApi.updateEntry(args[0], args[1]);
+          if (method === 'DELETE') return demoApi.deleteEntry(args[0]);
+          break;
+        case '/stats/':
+          return demoApi.getStats();
+        default:
+          throw new Error(`Demo API endpoint not implemented: ${endpoint}`);
+      }
+    } else {
+      // 正常的API调用
+      return api[method.toLowerCase()](endpoint, ...args);
+    }
+  };
+};
+
 // 请求拦截器 - 添加认证token
 api.interceptors.request.use(
   (config) => {
+    if (isDemoMode()) {
+      return config; // 演示模式不需要真实token
+    }
+    
     const token = localStorage.getItem('access_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
@@ -49,6 +94,10 @@ api.interceptors.response.use(
     return response.data;
   },
   async (error) => {
+    if (isDemoMode()) {
+      return Promise.reject(error); // 演示模式直接返回错误
+    }
+    
     const originalRequest = error.config;
     
     // 如果是401错误且不是刷新token的请求
@@ -125,3 +174,4 @@ api.interceptors.response.use(
 );
 
 export default api;
+export { isDemoMode };
