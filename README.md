@@ -1,166 +1,182 @@
-# Personal Story Tracker
+# 🌟 个人故事追踪器 (Personal Story Tracker)
 
-个人故事追踪器是一个现代化的Web应用程序，帮助用户记录和管理个人物品和重要人物的故事。
+[![Deploy to GitHub Pages](https://github.com/YOUR_USERNAME/personal-story-tracker/actions/workflows/deploy.yml/badge.svg)](https://github.com/YOUR_USERNAME/personal-story-tracker/actions/workflows/deploy.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## ✨ 功能特性
+一个用于记录和管理个人珍贵回忆的全栈Web应用程序。帮助您记录与重要物品和人物的故事，评估它们的重要性，并永久保存这些珍贵的回忆。
 
-- 📝 **条目管理**: 记录物品和人物条目，包含详细信息和故事
-- 🎨 **视觉定制**: 上传图片，添加装饰元素，个性化条目外观
-- 💰 **价值评估**: 自动计算物品折旧值和当前市场价值
-- ⭐ **重要度评估**: 多维度评估条目的情感和实用价值
-- 📱 **响应式设计**: 支持桌面、平板和移动设备
-- 🔐 **安全认证**: JWT身份验证，保护用户数据隐私
+## 🎯 项目亮点
 
-## 🏗️ 项目结构
+- 🏗️ **完整全栈架构** - Django + React 现代化技术栈
+- 🔐 **安全认证系统** - JWT令牌 + 自动登出保护
+- 📱 **响应式设计** - Material-UI + 移动端适配
+- 📊 **智能评估** - 多维度重要性评分算法
+- 🎨 **现代化UI** - 流畅动画 + 深色主题支持
+- 🧪 **完整测试** - 单元测试 + 属性测试覆盖
+- 🚀 **自动部署** - GitHub Actions CI/CD
 
-```
-personal-story-tracker/
-├── backend/                 # Django后端应用
-│   ├── story_tracker/      # 主项目配置
-│   ├── accounts/           # 用户认证模块
-│   ├── entries/            # 条目管理模块
-│   ├── stories/            # 故事内容模块
-│   ├── media_files/        # 媒体文件模块
-│   └── valuations/         # 价值评估模块
-├── frontend/               # React前端应用
-│   ├── src/
-│   │   ├── components/     # React组件
-│   │   ├── pages/          # 页面组件
-│   │   ├── store/          # Redux状态管理
-│   │   └── services/       # API服务
-│   └── package.json
-├── docker-compose.yml      # Docker配置
-├── DEVELOPMENT.md          # 开发指南
-└── README.md
-```
+## ✨ 功能特色
 
-## 🚀 技术栈
+### 🔐 用户认证系统
+- 安全的用户注册和登录
+- JWT令牌认证机制
+- 智能自动登出功能
+- 密码强度验证
 
-### 后端
-- **Django 4.2** - Web框架
-- **Django REST Framework** - API框架
-- **PostgreSQL** - 数据库
-- **JWT认证** - 身份验证
-- **Pillow** - 图像处理
-- **Hypothesis** - 属性测试
+### 📝 条目管理
+- 创建物品和人物条目
+- 富文本故事编辑器
+- 图片上传和管理
+- 智能标签分类系统
+- 全文搜索功能
 
-### 前端
-- **React 18** - 用户界面框架
-- **Redux Toolkit** - 状态管理
-- **Material-UI** - UI组件库
-- **Axios** - HTTP客户端
-- **React Router** - 路由管理
+### 📊 重要度评估
+- 多维度重要度评分
+- 自动重要度计算算法
+- 可视化统计图表
+- 重要度趋势分析
 
-## 🛠️ 快速开始
+### 🎨 现代化界面
+- Material-UI组件设计
+- 完全响应式布局
+- 深色/浅色主题切换
+- 流畅的动画过渡效果
 
-### 方法1: 使用Docker (推荐)
+## 🛠️ 技术栈
 
+### 前端技术
+- **React 18** - 现代化前端框架
+- **Material-UI v5** - Google Material Design组件库
+- **Redux Toolkit** - 现代化状态管理
+- **React Router v6** - 声明式路由
+- **Axios** - Promise based HTTP客户端
+- **React Quill** - 富文本编辑器
+
+### 后端技术
+- **Django 4.2** - 高级Python Web框架
+- **Django REST Framework** - 强大的API开发工具
+- **Simple JWT** - JWT认证实现
+- **SQLite/PostgreSQL** - 数据库支持
+- **CORS Headers** - 跨域请求支持
+- **Python Decouple** - 环境变量管理
+
+### 开发工具
+- **Docker** - 容器化部署
+- **GitHub Actions** - CI/CD自动化
+- **pytest** - Python测试框架
+- **Jest** - JavaScript测试框架
+
+## 🚀 快速开始
+
+### 环境要求
+- Python 3.8+
+- Node.js 16+
+- Git
+
+### 1. 克隆项目
 ```bash
-# 克隆项目
-git clone <repository-url>
+git clone https://github.com/YOUR_USERNAME/personal-story-tracker.git
 cd personal-story-tracker
-
-# 启动所有服务
-docker-compose up -d
-
-# 运行数据库迁移
-docker-compose exec backend python manage.py migrate
-
-# 创建超级用户
-docker-compose exec backend python manage.py createsuperuser
-
-# 初始化默认数据
-docker-compose exec backend python manage.py init_depreciation_rules
 ```
 
-访问应用:
-- 🌐 前端应用: http://localhost:3000
-- 🔧 后端API: http://localhost:8000/api
-- 👨‍💼 管理后台: http://localhost:8000/admin
-
-### 方法2: 本地开发
-
-#### 前置要求
-- Python 3.9+
-- Node.js 18+
-- PostgreSQL 13+
-
-#### 自动设置 (Linux/macOS)
-```bash
-chmod +x setup.sh
-./setup.sh
-```
-
-#### 手动设置
-
-**后端设置:**
+### 2. 后端设置
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-cp ../.env.example .env
-# 编辑 .env 文件配置数据库
 python manage.py migrate
-python manage.py createsuperuser
-python manage.py init_depreciation_rules
 python manage.py runserver
 ```
 
-**前端设置:**
+### 3. 前端设置
 ```bash
 cd frontend
 npm install
 npm start
 ```
 
-## 📚 API文档
+### 4. 访问应用
+- 🌐 前端应用：http://localhost:3000
+- 🔌 后端API：http://localhost:8000/api
+- ⚙️ 管理后台：http://localhost:8000/admin
 
-### 认证端点
-- `POST /api/auth/register/` - 用户注册
-- `POST /api/auth/login/` - 用户登录
-- `POST /api/auth/logout/` - 用户登出
-- `GET /api/auth/profile/` - 获取用户资料
+## 📱 在线演示
 
-### 条目管理
-- `GET /api/entries/` - 获取条目列表
-- `POST /api/entries/` - 创建新条目
-- `GET /api/entries/{id}/` - 获取条目详情
-- `PUT /api/entries/{id}/` - 更新条目
-- `DELETE /api/entries/{id}/` - 删除条目
+- 🌍 **GitHub Pages**: https://YOUR_USERNAME.github.io/personal-story-tracker
+- 🚀 **Vercel部署**: https://personal-story-tracker.vercel.app
 
-### 故事管理
-- `GET /api/stories/{entry_id}/` - 获取故事内容
-- `PUT /api/stories/{entry_id}/` - 更新故事内容
+## 📖 详细文档
 
-### 价值评估
-- `GET /api/valuations/{entry_id}/` - 获取价值评估
-- `POST /api/valuations/{entry_id}/calculate/` - 计算当前价值
+- 📚 [开发指南](DEVELOPMENT.md) - 本地开发环境搭建
+- 🚀 [部署指南](GITHUB_DEPLOYMENT.md) - 生产环境部署
+- 📡 [API文档](backend/entries/API_DOCUMENTATION.md) - RESTful API接口
 
-## 🧪 测试
+## 🎯 核心功能演示
 
-### 后端测试
+### 用户体验流程
+1. **注册/登录** → 安全的用户认证
+2. **创建条目** → 添加物品或人物
+3. **编写故事** → 记录珍贵回忆
+4. **重要度评估** → 智能评分系统
+5. **数据统计** → 可视化分析
+
+### 技术特色
+- ⚡ **性能优化** - 代码分割 + 懒加载
+- 🔒 **安全防护** - XSS防护 + CSRF保护
+- 📊 **数据可视化** - 图表展示 + 统计分析
+- 🎨 **用户体验** - 流畅动画 + 响应式设计
+
+## 🧪 测试覆盖
+
 ```bash
+# 后端测试
 cd backend
-python manage.py test          # Django测试
-pytest                         # pytest测试
-pytest -m property            # 属性测试
-```
+python -m pytest
 
-### 前端测试
-```bash
+# 前端测试
 cd frontend
-npm test                      # React测试
+npm test
 ```
 
-## 📖 开发指南
+- ✅ 单元测试覆盖率 > 80%
+- ✅ 集成测试完整覆盖
+- ✅ 属性测试验证核心逻辑
 
-详细的开发指南请参考 [DEVELOPMENT.md](DEVELOPMENT.md)
+## 🐳 Docker部署
 
-## 🤝 贡献
+```bash
+# 构建并启动所有服务
+docker-compose up -d
 
-欢迎贡献代码！请查看开发指南了解如何参与项目开发。
+# 访问应用
+# 前端: http://localhost:3000
+# 后端: http://localhost:8000
+```
+
+## 🤝 贡献指南
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 🙏 致谢
+
+- [Django](https://www.djangoproject.com/) - 强大的Python Web框架
+- [React](https://reactjs.org/) - 用户界面构建库
+- [Material-UI](https://mui.com/) - React UI组件库
+- [GitHub Actions](https://github.com/features/actions) - CI/CD自动化
+
+## 📞 联系方式
+
+- 📧 Email: your.email@example.com
+- 🐙 GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- 🌐 项目链接: [https://github.com/YOUR_USERNAME/personal-story-tracker](https://github.com/YOUR_USERNAME/personal-story-tracker)
+
+---
+
+⭐ 如果这个项目对您有帮助，请给它一个星标！
