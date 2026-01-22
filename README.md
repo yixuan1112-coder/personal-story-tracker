@@ -105,6 +105,7 @@ npm start
 
 - 🌍 **GitHub Pages演示**: https://yixuan1112-coder.github.io/personal-story-tracker-demo
 - 🚀 **完整版本**: 查看 [netlify-version分支](https://github.com/yixuan1112-coder/personal-story-tracker/tree/netlify-version)
+- 暂时版本：http://10.241.5.248:3000
 
 > 🎯 演示版本功能完整，数据存储在浏览器本地
 
@@ -177,7 +178,7 @@ docker-compose up -d
 
 ## 📞 联系方式
 
-- 📧 Email: your.email@example.com
+- 📧 Email: yixuan071112@outlook.com
 - 🐙 GitHub: [@yixuan1112-coder](https://github.com/yixuan1112-coder)
 - 🌐 项目链接: [https://github.com/yixuan1112-coder/personal-story-tracker](https://github.com/yixuan1112-coder/personal-story-tracker)
 
