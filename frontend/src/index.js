@@ -33,7 +33,7 @@ const theme = createTheme({
   },
 });
 
-// 获取basename，用于GitHub Pages部署
+// 获取basename，本地开发时暂时禁用
 const basename = process.env.NODE_ENV === 'production' ? '/personal-story-tracker-demo' : '';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
