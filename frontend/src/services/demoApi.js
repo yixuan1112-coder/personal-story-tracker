@@ -1,7 +1,8 @@
 // 演示模式API - 用于GitHub Pages部署
 // 模拟后端API响应，使用localStorage存储数据
 
-const DEMO_MODE = process.env.NODE_ENV === 'production' && window.location.hostname.includes('github.io');
+const DEMO_MODE = process.env.NODE_ENV === 'production' && 
+  (window.location.hostname.includes('github.io') || window.location.hostname === 'yixuanstorytracker.live');
 
 // 模拟数据
 const demoUsers = [

@@ -101,15 +101,15 @@ npm start
 
 ## 📱 在线演示
 
-- 🌍 **GitHub Pages**: https://yixuan1112-coder.github.io/personal-story-tracker
-- 🚀 **Vercel部署**: https://personal-story-tracker.vercel.app
+- 🌍 **主站点**: https://yixuanstorytracker.live
+- 🚀 **GitHub Pages**: https://yixuan1112-coder.github.io/personal-story-tracker
 
-> 🔄 网站正在部署中，请稍等片刻...
+> 🎯 推荐使用主站点获得最佳体验
 
 ## 📖 详细文档
 
 - 📚 [开发指南](DEVELOPMENT.md) - 本地开发环境搭建
-- 🚀 [部署指南](GITHUB_DEPLOYMENT.md) - 生产环境部署
+- 🚀 [Netlify部署](NETLIFY_DEPLOYMENT.md) - 生产环境部署
 - 📡 [API文档](backend/entries/API_DOCUMENTATION.md) - RESTful API接口
 
 ## 🎯 核心功能演示
