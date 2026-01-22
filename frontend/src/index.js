@@ -33,8 +33,8 @@ const theme = createTheme({
   },
 });
 
-// 获取basename，本地开发时暂时禁用
-const basename = process.env.NODE_ENV === 'production' ? '/personal-story-tracker-demo' : '';
+// Vercel部署不需要basename
+const basename = '';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
