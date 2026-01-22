@@ -104,6 +104,8 @@ npm start
 - 🌍 **GitHub Pages**: https://yixuan1112-coder.github.io/personal-story-tracker
 - 🚀 **Vercel部署**: https://personal-story-tracker.vercel.app
 
+> 🔄 网站正在部署中，请稍等片刻...
+
 ## 📖 详细文档
 
 - 📚 [开发指南](DEVELOPMENT.md) - 本地开发环境搭建
