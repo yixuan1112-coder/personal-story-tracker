@@ -1,9 +1,11 @@
-# 🌟 个人故事追踪器 (Personal Story Tracker)
+# 🌟 个人故事追踪器 - 演示版 (Personal Story Tracker Demo)
 
 [![Deploy to GitHub Pages](https://github.com/yixuan1112-coder/personal-story-tracker/actions/workflows/deploy.yml/badge.svg)](https://github.com/yixuan1112-coder/personal-story-tracker/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-一个用于记录和管理个人珍贵回忆的全栈Web应用程序。帮助您记录与重要物品和人物的故事，评估它们的重要性，并永久保存这些珍贵的回忆。
+一个用于记录和管理个人珍贵回忆的全栈Web应用程序演示版。帮助您记录与重要物品和人物的故事，评估它们的重要性，并永久保存这些珍贵的回忆。
+
+> 🎯 这是演示版本，完整版本请查看 [netlify-version分支](https://github.com/yixuan1112-coder/personal-story-tracker/tree/netlify-version)
 
 ## 🎯 项目亮点
 
@@ -101,10 +103,10 @@ npm start
 
 ## 📱 在线演示
 
-- 🌍 **主站点**: https://yixuanstorytracker.live
-- 🚀 **GitHub Pages**: https://yixuan1112-coder.github.io/personal-story-tracker
+- 🌍 **GitHub Pages演示**: https://yixuan1112-coder.github.io/personal-story-tracker-demo
+- 🚀 **完整版本**: 查看 [netlify-version分支](https://github.com/yixuan1112-coder/personal-story-tracker/tree/netlify-version)
 
-> 🎯 推荐使用主站点获得最佳体验
+> 🎯 演示版本功能完整，数据存储在浏览器本地
 
 ## 📖 详细文档
 

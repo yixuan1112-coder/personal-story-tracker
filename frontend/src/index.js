@@ -33,8 +33,8 @@ const theme = createTheme({
   },
 });
 
-// 获取basename，Netlify不需要子路径
-const basename = '';
+// 获取basename，用于GitHub Pages部署
+const basename = process.env.NODE_ENV === 'production' ? '/personal-story-tracker-demo' : '';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

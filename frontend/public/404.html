@@ -2,25 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Personal Story Tracker</title>
+    <title>Personal Story Tracker Demo</title>
     <script type="text/javascript">
-      // Netlify SPA redirect handling
-      // This script handles client-side routing for single page applications
-      // deployed on Netlify with custom domains
-      
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 1;
+
       var l = window.location;
-      var path = l.pathname;
-      
-      // If this is a direct access to a route (not the root), redirect to root with hash
-      if (path !== '/') {
-        // Convert path to hash-based routing temporarily
-        l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/#' + path + l.search + l.hash);
-      }
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
   </head>
   <body>
     <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-      <h1>个人故事追踪器</h1>
+      <h1>个人故事追踪器 - 演示版</h1>
       <p>正在加载应用程序...</p>
     </div>
   </body>
