@@ -1,6 +1,6 @@
 # 🌟 个人故事追踪器 (Personal Story Tracker)
 
-[![Deploy to GitHub Pages](https://github.com/YOUR_USERNAME/personal-story-tracker/actions/workflows/deploy.yml/badge.svg)](https://github.com/YOUR_USERNAME/personal-story-tracker/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/yixuan1112-coder/personal-story-tracker/actions/workflows/deploy.yml/badge.svg)](https://github.com/yixuan1112-coder/personal-story-tracker/actions/workflows/deploy.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 一个用于记录和管理个人珍贵回忆的全栈Web应用程序。帮助您记录与重要物品和人物的故事，评估它们的重要性，并永久保存这些珍贵的回忆。
@@ -75,7 +75,7 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://github.com/YOUR_USERNAME/personal-story-tracker.git
+git clone https://github.com/yixuan1112-coder/personal-story-tracker.git
 cd personal-story-tracker
 ```
 
@@ -101,7 +101,7 @@ npm start
 
 ## 📱 在线演示
 
-- 🌍 **GitHub Pages**: https://YOUR_USERNAME.github.io/personal-story-tracker
+- 🌍 **GitHub Pages**: https://yixuan1112-coder.github.io/personal-story-tracker
 - 🚀 **Vercel部署**: https://personal-story-tracker.vercel.app
 
 ## 📖 详细文档
@@ -174,8 +174,8 @@ docker-compose up -d
 ## 📞 联系方式
 
 - 📧 Email: your.email@example.com
-- 🐙 GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- 🌐 项目链接: [https://github.com/YOUR_USERNAME/personal-story-tracker](https://github.com/YOUR_USERNAME/personal-story-tracker)
+- 🐙 GitHub: [@yixuan1112-coder](https://github.com/yixuan1112-coder)
+- 🌐 项目链接: [https://github.com/yixuan1112-coder/personal-story-tracker](https://github.com/yixuan1112-coder/personal-story-tracker)
 
 ---
 
